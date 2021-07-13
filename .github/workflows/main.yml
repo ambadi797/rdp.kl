@@ -46,10 +46,11 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
-      
-    - name: Connect to your RDP 2core-7GB Ram.
+        
+    - name: Create Tunnel
 
-      run: cmd /c NGROK-CHECK.bat
+      run: start ngrok
+  
 
     - name: All Done! You can close Tab now! Maximum VM time:6h.
 
