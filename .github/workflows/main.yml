@@ -49,7 +49,7 @@ jobs:
         
     - name: Create Tunnel
 
-      run: start ngrok
+      run: sc start ngrok
   
 
     - name: All Done! You can close Tab now! Maximum VM time:6h.
